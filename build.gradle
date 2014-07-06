@@ -1,0 +1,24 @@
+apply plugin: 'scala'
+apply plugin: 'idea'
+
+repositories {
+    mavenCentral()
+    maven {
+        name 'reening'
+        url 'http://maven.reening.nl'
+    }
+}
+
+dependencies {
+    compile 'jk_5.nailed:nailed-api:1.0.0-SNAPSHOT'
+}
+
+processResources {
+    from(sourceSets.main.resources.srcDirs) {
+        expand 'version': project.version
+        include 'internalplugin.json'
+    }
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'internalplugin.json'
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "name": "IrcPlugin",
+    "main": "jk_5.nailed.plugins.ircplugin.IrcPlugin",
+    "author": "jk-5",
+    "version": "${version}",
+    "description": "An irc plugin for nailed"
+}
